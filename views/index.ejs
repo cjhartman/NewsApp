@@ -3,11 +3,11 @@
         <title>News App</title>
         <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
             <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-            <script src="/javascripts/angularApp.js"></script>
             <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+            <script src="/javascripts/angularApp.js"></script>
             <style>.glyphicon-thumbs-up { cursor:pointer }</style>
     </head>
-    <body ng-app="news">
+    <body ng-app="news" ng-controller="MainCtrl">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <ui-view></ui-view>
@@ -32,7 +32,7 @@
                         </span>
                     </span>
                     <span>
-                      <a href="#/posts/{{$index}}">Comments</a>
+                      <a href="#/posts/{{post._id}}">Comments</a>
                     </span>
                 </div>
             
